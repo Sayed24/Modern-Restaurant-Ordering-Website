@@ -12,30 +12,40 @@ const orderSuccess = document.getElementById("orderSuccess");
 /* =====================
    MENU RENDER
 ===================== */
+
 function renderMenu(items) {
   menuGrid.innerHTML = "";
 
-  items.forEach(item => {
-    const card = document.createElement("div");
-    card.className = "menu-card";
-    card.innerHTML = `
-      <img src="${item.image}" alt="${item.name}">
-      <div class="menu-card-body">
-        <h4>${item.name}</h4>
-        <p>${item.description}</p>
-      </div>
-      <div class="menu-card-footer">
-        <strong>$${item.price}</strong>
-        <button class="btn-primary" onclick="addToCart(${item.id})">
-          Add
-        </button>
-      </div>
-    `;
-    menuGrid.appendChild(card);
-  });
-}
+  // Skeleton loading
+  for (let i = 0; i < 3; i++) {
+    const skel = document.createElement("div");
+    skel.className = "skeleton";
+    menuGrid.appendChild(skel);
+  }
 
-renderMenu(menuData);
+  setTimeout(() => {
+    menuGrid.innerHTML = "";
+
+    items.forEach(item => {
+      const card = document.createElement("div");
+      card.className = "menu-card";
+      card.innerHTML = `
+        <img src="${item.image}" alt="${item.name}">
+        <div class="menu-card-body">
+          <h4>${item.name}</h4>
+          <p>${item.description}</p>
+        </div>
+        <div class="menu-card-footer">
+          <strong>$${item.price}</strong>
+          <button class="btn-primary" onclick="addToCart(${item.id})">
+            Add
+          </button>
+        </div>
+      `;
+      menuGrid.appendChild(card);
+    });
+  }, 500);
+}
 
 /* =====================
    FILTERS
