@@ -321,3 +321,38 @@ body {
     font-size: 2.5rem;
   }
 }
+
+/* =====================
+   CART ITEM POLISH
+===================== */
+.cart-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: .6rem;
+  align-items: center;
+  padding: .6rem 0;
+  border-bottom: 1px dashed var(--border);
+  font-size: .85rem;
+}
+
+.cart-item button {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cart-item button:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Disabled button */
+.btn-disabled {
+  opacity: .6;
+  pointer-events: none;
+}
+
