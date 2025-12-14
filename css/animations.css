@@ -1,1 +1,51 @@
+/* =====================
+   ANIMATIONS
+===================== */
 
+.menu-card {
+  animation: fadeUp .5s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cart-panel {
+  animation: slideIn .4s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,.3);
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.btn-primary:hover::after {
+  opacity: 1;
+}
