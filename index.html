@@ -1,1 +1,133 @@
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Urban Bites • Online Ordering</title>
+
+  <!-- Meta -->
+  <meta name="description" content="Modern restaurant ordering website with interactive cart and checkout." />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body class="light-theme">
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container header-inner">
+      <h1 class="logo">Urban<span>Bites</span></h1>
+
+      <nav class="nav">
+        <button id="themeToggle" aria-label="Toggle theme">
+          <i class="ri-moon-line"></i>
+        </button>
+
+        <button id="cartBtn" class="cart-btn">
+          <i class="ri-shopping-bag-line"></i>
+          <span id="cartCount">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h2>Delicious Food, Delivered Fast</h2>
+      <p>Order fresh meals crafted with love. Anytime. Anywhere.</p>
+      <button class="btn-primary scroll-menu">Order Now</button>
+    </div>
+  </section>
+
+  <!-- ================= MENU ================= -->
+  <main class="menu-section" id="menu">
+    <div class="container">
+      <h3 class="section-title">Our Menu</h3>
+
+      <!-- Filters -->
+      <div class="menu-filters">
+        <button class="filter active" data-category="all">All</button>
+        <button class="filter" data-category="burger">Burgers</button>
+        <button class="filter" data-category="pizza">Pizza</button>
+        <button class="filter" data-category="drink">Drinks</button>
+        <button class="filter" data-category="dessert">Desserts</button>
+      </div>
+
+      <!-- Menu Grid -->
+      <div class="menu-grid" id="menuGrid">
+        <!-- Menu items injected by JS -->
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= CART ================= -->
+  <aside class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+      <h4>Your Order</h4>
+      <button id="closeCart"><i class="ri-close-line"></i></button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <p class="empty-cart">Your cart is empty</p>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <strong id="cartTotal">$0.00</strong>
+      </div>
+      <button class="btn-primary checkout-btn">Checkout</button>
+    </div>
+  </aside>
+
+  <!-- ================= CHECKOUT ================= -->
+  <section class="checkout hidden" id="checkout">
+    <div class="container checkout-box">
+      <h3>Checkout</h3>
+
+      <form id="checkoutForm">
+        <input type="text" placeholder="Full Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <textarea placeholder="Delivery Address" required></textarea>
+
+        <button type="submit" class="btn-primary">Place Order</button>
+      </form>
+
+      <div class="order-success hidden" id="orderSuccess">
+        <i class="ri-checkbox-circle-line"></i>
+        <h4>Order Placed Successfully!</h4>
+        <p>Your food is on the way 🚀</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2025 Urban Bites. All rights reserved.</p>
+      <div class="socials">
+        <i class="ri-instagram-line"></i>
+        <i class="ri-facebook-line"></i>
+        <i class="ri-twitter-line"></i>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= JS ================= -->
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
