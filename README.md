@@ -22,4 +22,5 @@ This project demonstrates real-world front-end development skills
 including UI/UX design, state management, and interactive logic.
 
 ## 🚀 Live Demo
-(Add your GitHub Pages link here)
+
+https://sayed24.github.io/Modern-Restaurant-Ordering-Website/
